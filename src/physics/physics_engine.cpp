@@ -135,11 +135,11 @@ void PhysicsEngine::solveCollisionsOptimized() {
 }
 void PhysicsEngine::update(float dt) {
     if (useGPU){
-           cuda_solve_collisions(gameObjectsXPositions, gameObjectsYPositions, gameObjectsRadius,
-                                 gameObjectsXLastPosition, gameObjectsYLastPosition,
-                                 gameObjectsXAcceleration, gameObjectsYAcceleration,
-                                 gravity.x, gravity.y, dt, sub_steps,
-                                 numberOfGameObjects);
+        //    cuda_solve_collisions(gameObjectsXPositions, gameObjectsYPositions, gameObjectsRadius,
+        //                          gameObjectsXLastPosition, gameObjectsYLastPosition,
+        //                          gameObjectsXAcceleration, gameObjectsYAcceleration,
+        //                          gravity.x, gravity.y, dt, sub_steps,
+        //                          numberOfGameObjects);
     }
     else{
         float sub_dt = dt / (float)sub_steps;

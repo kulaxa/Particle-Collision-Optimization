@@ -5,10 +5,10 @@
 #include <iostream>
 
 
-extern "C" void cuda_solve_collisions(float *currPositionsX, float *currPositionsY, float *radii,
-                                      float *lastPositionsX, float *lastPositionsY, float *accelerationX,
-                                      float *accelerationY,  float xGravity,  float yGravity,
-                                      float dt, int substeps, int numElements);
+// extern "C" void cuda_solve_collisions(float *currPositionsX, float *currPositionsY, float *radii,
+//                                       float *lastPositionsX, float *lastPositionsY, float *accelerationX,
+//                                       float *accelerationY,  float xGravity,  float yGravity,
+//                                       float dt, int substeps, int numElements);
 
 class PhysicsEngine {
 public:

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 
-project(ParticleCollision CXX CUDA)
+project(ParticleCollision CXX)
 #project(ParticleCollision CXX)
 
 # Set C++ version
@@ -16,7 +16,6 @@ find_package(GLUT REQUIRED)
 find_package(GLEW REQUIRED)
 find_package(Threads REQUIRED)
 find_package(OpenMP REQUIRED)
-find_package(CUDAToolkit REQUIRED)
 
 
 # Set build type
@@ -27,7 +26,6 @@ endif(NOT CMAKE_BUILD_TYPE)
 
 # Set source files
 set(SOURCE_FILES
-        src/physics.cu
         src/main.cpp
         imgui/imgui.cpp
         imgui/imgui_draw.cpp
@@ -64,7 +62,6 @@ target_link_libraries(${PROJECT_NAME}
         GL GLU glut
         ${CMAKE_THREAD_LIBS_INIT}
         OpenMP::OpenMP_CXX
-        CUDA::cudart
 )
 
 # Set compiler flags for optimization and warnings
