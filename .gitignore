@@ -1,0 +1,8 @@
+.exe
+.out
+build
+cmake-build*
+*build*
+bin
+venv
+imgui.ini
